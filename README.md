@@ -10,4 +10,6 @@ Project Guidelines: https://docs.google.com/document/d/1ONaMN_JOfFQKMKKlAkbNHpd7
 
 # Project Introduction:
 
+Create a program that simulates the ethical dilemma of whether to cross the road or not when urgent personal circumstances arise. The program must allow the player to make choices, show different consequences depending on decisions, and track how often the player follows or breaks the law. 
+More advanced versions can add elements such as urgency level, multiple rounds, random scenarios, scoring, and summaries of choices.
 
