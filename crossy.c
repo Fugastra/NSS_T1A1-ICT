@@ -216,6 +216,10 @@ while(doagain == 1){
 	printf("Play Again? ");
 	scanf("%d", &doagain);
 
+	if(doagain != 1 || doagain != 0){
+		doagain = 0;
+	}
+
 }
 
 	return(0);
