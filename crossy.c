@@ -16,7 +16,6 @@ Note:
 #include <time.h>
 #include <stdlib.h>
 
-
 int situation(){
 	
 	int cross;
@@ -31,13 +30,14 @@ int situation(){
 	 **/
 	data[0] = 10;
 	data[3] = 3;
+	srand(time(NULL));
 
  	 printf("-- Situation 1: It's Raining D O G --\n");
 	 printf("You are now chased by 100 rabbid dogs, the only way to save your life is by crossing a red light. Do you cross? \n");
 	 printf("Traffic: Heavy \n");
 	 printf("1 - Yes/0 - No ");
 	 sec = 5;
-	 rand_num = rand() % (4 + 1);
+	 rand_num = rand() % 4;
 	
 	 scanf("%d", &cross);
 
@@ -68,12 +68,17 @@ int situation(){
 		 data[2] += 1;
 		 data[3] -= 2;
 	 }
+	 
+	 printf("Press Enter to continue...");
+	 getchar();
+	 getchar();
+	 printf("\n");
 
 	 printf("-- Situation 2: Million Dollar Move -- \n");
 	 printf("Across the Road is a $1000000 (USD of course), if you cross now, you'll get it. Do you cross? \n");
 	 printf("Traffic: Medium \n");
 	 printf("1 - Yes /0 - No ");
-	 rand_num = rand() % (3 + 1);
+	 rand_num = rand() % 3;
 
 	 scanf("%d", &cross);       
 
@@ -101,6 +106,11 @@ int situation(){
 		data[0] += 3;
 		data[2] += 1;
 	}
+	
+	 printf("Press Enter to continue...");
+	 getchar();
+	 getchar();
+	 printf("\n");
 
 	printf("-- Situation 3: Heaven's Gate(Drink the Koolaid --\n");
 	printf("You are dead (presumably from the dogs), you are now standing before the gates of heaven. Ahead are the pearly gates, but there's a huge road with traffic, and OH NO, if you don't cross, you won't make it into heaven(imaginary), do you cross and potentially suffer the wrath of GOD!! \n");
@@ -127,11 +137,16 @@ int situation(){
 		data[3] += 1;
 	}
 
+	 printf("Press Enter to continue...");
+	 getchar();
+	 getchar();
+	 printf("\n");
+
 	printf("-- Situation 4: Have fun ^_^ -- \n");
 	printf("Across the road is someone being brutally murdered, if you don't cross now, they'll be dead (did I mention there is no one around?), if you do cross, you risk dying yourself from the traffic. Do you cross? \n");
 	printf("Traffic: [[NO DATA]] \n");
 	printf("1 - Yes/ 0 - No/ 2 - ??? ");
-	rand_num = rand() % (5 + 1);
+	rand_num = rand() % 5;
 	
 	scanf("%d", &cross);
 	
@@ -167,6 +182,11 @@ int situation(){
 		data[2] += 1;
 		data[3] -= 3;
 	}
+	
+	 printf("Press Enter to continue...");
+	 getchar();
+	 getchar();
+	 printf("\n");
 
 	printf(" === SUMMARY === \n");
 	printf("Morality: %d", data[0]);
@@ -188,6 +208,9 @@ int situation(){
 	}
 	printf("\n");
 	printf("Crossed: %d | Obeyed: %d", data[1], data[2]);
+	printf("\n");
+	printf("Press Enter to continue...");
+	getchar();
 	printf("\n\n");
 
 }
@@ -195,9 +218,9 @@ int situation(){
 
 int main(){
 	
-	int doagain = 1;
+	char doagain = '1';
 
-while(doagain == 1){
+while(doagain == '1'){
 
 	int cross;
 	
@@ -205,6 +228,12 @@ while(doagain == 1){
 	printf("Instructions: \n In this game you will be given a situation, and depending on your morals (or lack thereof), you must choose between crossing the road when it's a red light, or not crossing. If you choose to cross, great you just demonstrated that you choose to be righteous in a Computer Terminal Game, if you choose to cross, you just demonstrated that you lack morals, but who cares am I right?");
 	printf("\n\n");
 	
+	printf("Press enter to Continue... ");
+	getchar();
+	printf("\n");
+	int mode = 1;
+	
+
 	/** 10/09/2025 Jason's PROBLEM below:
 	 *Add input for different modes
 	 *Add "Boss Fight" mode, vs Moral Nihlist
@@ -213,13 +242,10 @@ while(doagain == 1){
  	**/
 	situation();
 	
-	printf("Play Again? ");
-	scanf("%d", &doagain);
+	printf("Play Again? \n[1] - Yes \n[0] - No \n ");
+	scanf("%c", &doagain);
 
-	if(doagain != 1 || doagain != 0){
-		doagain = 0;
-	}
-
+	printf("\n");
 }
 
 	return(0);
