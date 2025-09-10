@@ -215,6 +215,57 @@ int situation(){
 
 }
 
+void bossfight(){
+	
+	printf("Note: This mode has OS-specific commands. Please Input your Operating System: \n");
+	printf("1. Windows \n2. Linux \n\nEnter: ");
+	char OS;
+	getchar();
+	scanf("%c", &OS);
+
+	if(OS == '1'){
+		system("cls");
+	}
+	if(OS == '2'){
+		system("clear");
+	}
+
+	/**
+	 * Data Storage below [ DO NOT TOUCH(or mkdir) ]
+	 * [0] = Health | [1] = YOUR health (yea go mess with it if you want to not have fun) | [2] = ?
+	 * I have this extra line here idk what to do with it... Hi Mr Yung, hope your sanity is still intact reading my "code" lmao
+	 **/
+	int niet[] = {0};
+	niet[0] = 5;
+	niet[1] = 3;
+
+	char choice;
+
+	printf("You come face-to-face with someone you haven't met before... \n");
+	printf("You sense a werid aura eminating from his body\n\n");
+	printf(" ... You feel like you're gonna have a B A D time ... \n");
+	printf("Press Enter to Continue ???");
+	getchar();
+ 	getchar();
+	printf("\n");
+	
+	if(OS == '1'){
+		system("cls");
+	}
+	if(OS == '2'){
+		system("clear");
+	}
+
+	printf("It's just you and M E here\n");
+	printf("\n\n");
+
+	printf("[ M O R A L | N I H I L I S T ]: \n HEALTH: [=====] |  MORALITY: ERROR: 404  |  NOTE: Will mess you up \n\n ");
+	
+	
+
+	printf("Press Enter to continue...");
+	getchar();
+}
 
 int main(){
 	
@@ -231,17 +282,17 @@ while(doagain == '1'){
 	printf("Press enter to Continue... ");
 	getchar();
 	printf("\n");
-	int mode = 1;
 	
+	char mode = '1';
+	printf("Select Mode: \n1. Normal Mode \n2. Bossfight \n\nEnter: ");
+	scanf("%c", &mode);
 
-	/** 10/09/2025 Jason's PROBLEM below:
-	 *Add input for different modes
-	 *Add "Boss Fight" mode, vs Moral Nihlist
-	 *Add Secret dialouge
-	 *Bugfix Game
- 	**/
-	situation();
-	
+	if(mode == '1'){
+		situation();
+	}
+	if(mode == '2'){
+		bossfight();
+	}
 	printf("Play Again? \n[1] - Yes \n[0] - No \n ");
 	scanf("%c", &doagain);
 
@@ -251,3 +302,4 @@ while(doagain == '1'){
 	return(0);
 
 }
+
