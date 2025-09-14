@@ -215,6 +215,15 @@ int situation(){
 
 }
 
+int cls(char OS){
+	if(OS == '1'){
+		system("cls");
+	}
+	if(OS == '2'){
+		system("clear");
+	}
+}
+
 void bossfight(){
 	
 	printf("Note: This mode has OS-specific commands. Please Input your Operating System: \n");
@@ -223,13 +232,7 @@ void bossfight(){
 	getchar();
 	scanf("%c", &OS);
 
-	if(OS == '1'){
-		system("cls");
-	}
-	if(OS == '2'){
-		system("clear");
-	}
-
+	cls(OS);
 	/**
 	 * Data Storage below [ DO NOT TOUCH(or mkdir) ]
 	 * [0] = Health | [1] = YOUR health (yea go mess with it if you want to not have fun) | [2] = ?
@@ -249,12 +252,7 @@ void bossfight(){
  	getchar();
 	printf("\n");
 	
-	if(OS == '1'){
-		system("cls");
-	}
-	if(OS == '2'){
-		system("clear");
-	}
+	cls(OS);
 
 	printf("It's just you and M E here\n");
 	printf("\n\n");
