@@ -16,6 +16,8 @@ More advanced versions can add elements such as urgency level, multiple rounds, 
 ## Lab Work: 
 This github Repository also includes files for Lab works
 
-Lab Work (1): Mini Calculator
+**Lab Work (1): Mini Calculator**
+
 Deadline: 13/10/2025
+
 Project Reference: https://docs.google.com/document/d/1YSkM0FoalGTgcxl4ybRj_wpzfVd97aUP0KifmPW6UK4/edit?usp=sharing
