@@ -21,3 +21,5 @@ This github Repository also includes files for Lab works
 Deadline: 13/10/2025
 
 Project Reference: https://docs.google.com/document/d/1YSkM0FoalGTgcxl4ybRj_wpzfVd97aUP0KifmPW6UK4/edit?usp=sharing
+
+![Brain made](brainmade.png)
