@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 /**
@@ -17,34 +18,126 @@ void cls(string OS){
 	}
 }
 
-void miku();
-void teto();
-void neru();
-void kaito();
-void pain();
-void hero();
-void gayline();
+void bokaru(int mode){
+	float a;
+	float b;
+	float output;
+	cout << "\033[1;34mEnter #1: ";
+	cin >> a;
+	cout << "Enter #2: ";
+	cin >> b;
+	cout << "\033[0m";
+	cout << "\n" << "\033[1;33m---\033[0m" << "\n";
+
+	switch(mode){
+		case 1:
+			output = a + b;
+			cout << "\033[1;33mOutput: " << output << "\n\n\033[0m";
+			break;
+		
+		case 2:
+			output = a - b;
+			cout << "\033[1;33mOutput: " << output << "\n\n\033[0m";
+			break;
+		
+		case 3:
+			output = a * b;
+			cout << "\033[1;33mOutput: " << output << "\n\n\033[0m";
+			break;
+
+		case 4:
+			output = a / b;
+			cout << "\033[1;33mOutput: " << output << "\n\n\033[0m";
+			break;
+	}
+}
+
+void pain(){
+	double a;
+	double b;
+	double c;
+
+	cout << "\033[1;34mEnter a: ";
+	cin >> a;
+	cout << "Enter b: ";
+	cin >> b;
+	cout << "Enter c: ";
+	cin >> c;
+	cout << "\033[0m";
+
+	double x1 = (-b + sqrt(pow(b,2) - (4 * a * c)))/(2 * a);
+	double x2 = (-b - sqrt(pow(b,2) - (4 * a * c)))/(2 * a);
+	
+	cout << "\033[1;33m\n\n" << "--- \n\n";
+	cout << "x = " << x1 << " , " << x2 << "\n\n\033[0m";
+}
+
+void hero(){
+	double a;
+	double b;
+	double c;
+
+	cout << "\033[1;34mEnter side A: ";
+	cin >> a;
+	cout << "Enter side B: ";
+	cin >> b;
+	cout << "Enter side C: ";
+	cin >> c;
+	cout << "\033[0m";
+
+	double s = ((a+b+c)/2);
+	double Area = (sqrt(s * (s-a) * (s-b) * (s-c)));
+
+	cout << "\033[1;33m\n\n" << "--- \n\n";
+	cout << "Area = " << Area << "\n\n\033[0m";
+}
+
+void gayline(){
+	double x1;
+	double y1;
+	double x2;
+	double y2;
+
+	cout << "\033[1;34mEnter x-coordinate 1: ";
+	cin >> x1;
+	cout << "Enter y-coordinate 1: ";
+	cin >> y1;
+	cout << "Enter x-coordinate 2: ";
+	cin >> x2;
+	cout << "Enter y-coordinate 2: ";
+	cin >> y2;
+	cout << "\033[0m";
+
+	double difx = x1 - x2;
+	double dify = y1 - y2;
+ 	double	d = sqrt(pow(difx,2) + pow(dify,2));
+	double  m = dify / difx;
+
+	cout << "\033[1;33m\n\n" << "--- \n\n";
+	cout << "Distance = " << d << ", Slope = " << m << "\n\n\033[0m";
+}
 
 int main(){
 	string type;
-	cout << "{ Please input your OS: }" << "\n\n";
-	cout << "1. Windows \n2. Linux \n\nInput: ";
+	cout << "\033[1;3;31m{ Please input your OS: }" << "\n\n\033[0m";
+	cout << "\033[1m1. Windows \n2. Linux \n\nInput: ";
+	cout << "\033[0m";
 	cin >> type;
 	
 	cls(type);
 	getchar();
 	string mode;
 
-	cout << "--- MINI CALCULATOR v0.1.1 ---" << "\n\n";
-	cout << "1. Arithmetic \n2. Formulas \n3. Exit \n\nInput: ";
+	cout << "\033[1;34m--- MINI CALCULATOR v0.1.1 ---\033[0m" << "\n\n";
+	cout << "\033[1;32m1. Arithmetic \033[0m\n\033[1;35m2. Formulas \033[0m\n\033[1;33m3. Exit \033[0m\n\n\033[1mInput: \033[0m";
 	cin >> mode;
 
 	cls(type);
 	getchar();
 
 	if(mode == "1"){
-		cout << "-- Functions --- \n\n";
-		cout << "1. Addition \n2. Subtraction \n3. Multiplication \n4. Division \n\nInput: ";
+		cout << "\033[1;34m--- Functions --- \n\n\033[0m";
+		cout << "\033[1;36m1. Addition \n2. Subtraction \n3. Multiplication \n4. Division \n\nInput: \033[0m";
 		char armode;
 		cin >> armode;
 
@@ -53,16 +146,16 @@ int main(){
 
 		switch(armode){
 			case '1':
-				//miku();
+				bokaru(1);
 				break;
 			case '2':
-				//teto();
+				bokaru(2);
 				break;
 			case '3':
-				//neru();
+				bokaru(3);
 				break;
 			case '4':
-				//kaito();
+				bokaru(4);
 				break;
 		
 			default:
@@ -71,8 +164,8 @@ int main(){
 		}
 	}
 	else if(mode == "2"){
-		cout << "--- Formulas --- \n\n";
-		cout << "1. Quadratic Formula \n2. Heron's Formula \n3. Equation of Straight Line \n\nInput: ";
+		cout << "\033[1;34m--- Formulas --- \n\n\033[0m";
+		cout << "\033[1;36m1. Quadratic Formula \n2. Heron's Formula \n3. Distance & Slope formula \n\n\033[1mInput: \033[0m";
 		char fomode;
 		cin >> fomode;
 		
@@ -80,32 +173,31 @@ int main(){
 		getchar();
 		switch(fomode){
 			case '1':
-				//pain();
+				pain();
 				break;
 			case '2':
-				//hero();
+				hero();
 				break;
 			case '3':
-				//gayline();
+				gayline();
 				break;
 			default:
 				cout << "Invalid Option: Cry Harder";
 		}
 	
 	}
-	cout << "--- Good Riddance --- \n\n";
+	cout << "\033[1;31m--- Goodbye --- \n\n\033[0m";
 	getchar();
 
 	return 0;
 }
 
-void miku(){
-	float diva, float idol;
-	cout << "Enter #1: ";
-	cin >> diva;
-	cout << "Enter #2: ";
-	cin >> idol;
+/*
+ Why are my limbs slack?
+ Why can't I move my eyes?
+ Why can't my mouth move?
+ Is this an internal monolouge?
+ I can't see the end of this horizon?
+ HATSUNE MIKU?!!?!?!?!?!?
+ */
 
-
-
-}
