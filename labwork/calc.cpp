@@ -144,6 +144,34 @@ void binconv(){
 	cout << "\n\n\033[0m";
 }
 
+unsigned int fac(unsigned int x){
+	if(x == 0)
+		return 1;
+	return x*fac(x-1);
+}
+
+void ncr(){
+	unsigned int i,n,r,cpt,ppt;
+	unsigned int nfac = 1;
+	unsigned int rfac = 1;
+	unsigned int nrfac = 1;
+
+	cout << "\033[1;34mInput n: ";
+	cin >> n;
+	cout << "Input r: ";	
+	cin >> r;
+	cout << "\n\n\033[0m";
+	
+	nfac = fac(n);
+	rfac = fac(r);
+	nrfac = fac((n-r));
+
+	cpt = nfac / (nrfac * rfac);
+	ppt = nfac / rfac;
+
+	cout << "\033[1;33mnCr = " << cpt << " nPr = "<< ppt <<"\n\n\033[0m";
+}
+
 void exif(string OS){
 	cout << "\033[1;31m Press Enter to continue...\n\n\033[0m";
 	getchar();
@@ -174,7 +202,8 @@ int main(){
 
 	if(mode == "1"){
 		cout << "\033[1;34m--- Functions --- \n\n\033[0m";
-		cout << "\033[1;36m1. Addition \n2. Subtraction \n3. Multiplication \n4. Division \n\nInput: \033[0m";
+		cout << "\033[1;36m1. Addition \n2. Subtraction \n3. Multiplication \n4. Division";
+		cout << "\n--- \n5. Back \nInput: \033[0m";
 		char armode;
 		cin >> armode;
 
@@ -200,13 +229,16 @@ int main(){
 				break;
 		
 			default:
-				cout << "\033[1;31mInvalid option \n\n\033[0m";	
-		
+				cls(type);
 		}
 	}
 	else if(mode == "2"){
 		cout << "\033[1;34m--- Functions --- \n\n\033[0m";
-		cout << "\033[1;36m1. Quadratic Formula \n2. Heron's Formula \n3. Distance & Slope formula \n4. base10 -> base2 converter\n\n\033[1mInput: \033[0m";
+		cout << "\033[1;36m1. Quadratic Formula \n2. Heron's Formula \n3. Distance & Slope formula \n";
+		cout << "--- \n";
+		cout <<	"4. base10 -> base2 converter \n5. Combination \n";
+		cout << "--- \n";
+		cout << "\n6. back\n\033[1mInput: \033[0m";
 		char fomode;
 		cin >> fomode;
 		
@@ -229,8 +261,12 @@ int main(){
 				binconv();
 				exif(type);
 				break;
+			case '5':
+				ncr();
+				exif(type);
+				break;
 			default:
-				cout << "\033[1;31mInvalid Option \n\n\033[0m";
+				cls(type);
 		}
 	
 	}else{
