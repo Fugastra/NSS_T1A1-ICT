@@ -14,7 +14,7 @@ void cls(string OS){
 		system("clear");
 	}
 	else{
-		cout << "Invalid input";
+		cout << "\033[1;31mInvalid input \n\n\033[0m";
 	}
 }
 
