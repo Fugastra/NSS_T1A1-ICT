@@ -185,6 +185,8 @@ int main(){
 				cout << "Invalid Option: Cry Harder";
 		}
 	
+	}else{
+		exit(1);
 	}
 	cout << "\033[1;31m--- Goodbye --- \n\n\033[0m";
 	getchar();
