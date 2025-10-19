@@ -144,6 +144,13 @@ void binconv(){
 	cout << "\n\n\033[0m";
 }
 
+void exif(string OS){
+	cout << "\033[1;31m Press Enter to continue...\n\n\033[0m";
+	getchar();
+	getchar();
+	cls(OS);
+}
+
 int main(){
 	string type;
 	cout << "\033[1;3;31m{ Please input your OS: }" << "\n\n\033[0m";
@@ -154,6 +161,9 @@ int main(){
 	cls(type);
 	getchar();
 	string mode;
+	char eqit = '0';
+
+	while (eqit == '0'){
 
 	cout << "\033[1;34m--- MINI CALCULATOR v0.1.1 ---\033[0m" << "\n\n";
 	cout << "\033[1;32m1. Arithmetic \033[0m\n\033[1;35m2. Functions \033[0m\n\033[1;33m3. Exit \033[0m\n\n\033[1mInput: \033[0m";
@@ -174,15 +184,19 @@ int main(){
 		switch(armode){
 			case '1':
 				bokaru(1);
+				exif(type);
 				break;
 			case '2':
 				bokaru(2);
+				exif(type);
 				break;
 			case '3':
 				bokaru(3);
+				exif(type);
 				break;
 			case '4':
 				bokaru(4);
+				exif(type);
 				break;
 		
 			default:
@@ -201,25 +215,29 @@ int main(){
 		switch(fomode){
 			case '1':
 				pain();
+				exif(type);
 				break;
 			case '2':
 				hero();
+				exif(type);
 				break;
 			case '3':
 				gayline();
+				exif(type);
 				break;
 			case '4':
 				binconv();
+				exif(type);
 				break;
 			default:
 				cout << "\033[1;31mInvalid Option \n\n\033[0m";
 		}
 	
 	}else{
-		exit(1);
+		eqit = '1';
+	}
 	}
 	cout << "\033[1;31m--- Goodbye --- \n\n\033[0m";
-	getchar();
 
 	return 0;
 }
