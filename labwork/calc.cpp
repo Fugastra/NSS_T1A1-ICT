@@ -117,6 +117,33 @@ void gayline(){
 	cout << "Distance = " << d << ", Slope = " << m << "\n\n\033[0m";
 }
 
+void binconv(){
+	int i;
+	int ipt;
+	int nimput;
+	int digits[16];
+
+	cout << "\033[1;34mInput: ";
+	cin >> ipt;
+	
+	nimput = ipt / 2;
+	int rem = ipt % 2;
+
+	cout << ipt << "\033[1;33m as in base2 = ";
+
+	for (i = 0; i < 16; i++){
+		digits[15-i] = rem;
+		rem = nimput % 2;
+		nimput = nimput / 2;
+	}
+
+	for (i = 0; i < 16; i++){
+		cout << digits[i];
+	}
+
+	cout << "\n\n\033[0m";
+}
+
 int main(){
 	string type;
 	cout << "\033[1;3;31m{ Please input your OS: }" << "\n\n\033[0m";
@@ -129,7 +156,7 @@ int main(){
 	string mode;
 
 	cout << "\033[1;34m--- MINI CALCULATOR v0.1.1 ---\033[0m" << "\n\n";
-	cout << "\033[1;32m1. Arithmetic \033[0m\n\033[1;35m2. Formulas \033[0m\n\033[1;33m3. Exit \033[0m\n\n\033[1mInput: \033[0m";
+	cout << "\033[1;32m1. Arithmetic \033[0m\n\033[1;35m2. Functions \033[0m\n\033[1;33m3. Exit \033[0m\n\n\033[1mInput: \033[0m";
 	cin >> mode;
 
 	cls(type);
@@ -159,13 +186,13 @@ int main(){
 				break;
 		
 			default:
-				cout << "Invalid option";	
+				cout << "\033[1;31mInvalid option \n\n\033[0m";	
 		
 		}
 	}
 	else if(mode == "2"){
-		cout << "\033[1;34m--- Formulas --- \n\n\033[0m";
-		cout << "\033[1;36m1. Quadratic Formula \n2. Heron's Formula \n3. Distance & Slope formula \n\n\033[1mInput: \033[0m";
+		cout << "\033[1;34m--- Functions --- \n\n\033[0m";
+		cout << "\033[1;36m1. Quadratic Formula \n2. Heron's Formula \n3. Distance & Slope formula \n4. base10 -> base2 converter\n\n\033[1mInput: \033[0m";
 		char fomode;
 		cin >> fomode;
 		
@@ -181,8 +208,11 @@ int main(){
 			case '3':
 				gayline();
 				break;
+			case '4':
+				binconv();
+				break;
 			default:
-				cout << "Invalid Option: Cry Harder";
+				cout << "\033[1;31mInvalid Option \n\n\033[0m";
 		}
 	
 	}else{
