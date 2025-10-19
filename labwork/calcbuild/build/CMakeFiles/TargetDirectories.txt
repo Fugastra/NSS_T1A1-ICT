@@ -1,3 +1,0 @@
-/home/fugastra/Documents/Code/lbwork/build/CMakeFiles/Calc.dir
-/home/fugastra/Documents/Code/lbwork/build/CMakeFiles/edit_cache.dir
-/home/fugastra/Documents/Code/lbwork/build/CMakeFiles/rebuild_cache.dir

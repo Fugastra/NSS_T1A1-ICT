@@ -23,11 +23,12 @@ Deadline: 13/10/2025
 Project Reference: https://docs.google.com/document/d/1YSkM0FoalGTgcxl4ybRj_wpzfVd97aUP0KifmPW6UK4/edit?usp=sharing
 
 ## Downloads Intructions:
-1. The file is located in the folder called "labwork"
-2. Click on the C++ file, that is the project file
-3. The compiled file should also be there, that may only work on Linux
-4. To compile use g++ calc.cpp -o {output file name} 
-5. Run!
+Open Windows Powershell / Terminal
+``` git
+git clone https://github.com/Fugastra/NSS_T1A1-ICT.git
+cd labwork/build
+makepkg 
+```
 
 
 ![Brain made](bm.png)
