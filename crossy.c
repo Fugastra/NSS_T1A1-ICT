@@ -243,6 +243,7 @@ void bossfight(){
 	niet[1] = 3;
 
 	char choice;
+  int act;
 
 	printf("You come face-to-face with someone you haven't met before... \n");
 	printf("You sense a werid aura eminating from his body\n\n");
@@ -259,7 +260,16 @@ void bossfight(){
 
 	printf("[ M O R A L | N I H I L I S T ]: \n HEALTH: [=====] |  MORALITY: ERROR: 404  |  NOTE: Will mess you up \n\n ");
 	
-	
+	printf("What are you going to do? \n");
+  printf("1.Attack \n2.Act \n3.Item \n4.Leave \n\nAct: ");
+  scanf("%d", &act);
+  cls(OS);
+  switch(act){
+    case 1:
+      printf("[ M O R A L | N I H I L I S T ]: \n HEALTH: [-----] |  MORALITY: $⃞ $⃞ $⃞ |  NOTE: Dead \n\n ");
+      printf("I mean, you did attack him... I mean technically this is a realistic boss fight, I didn't mention who this person is, for all I know they could be Helen Keller. Do you feel bad about killing Helen Keller? What if I told you it was John F Kennedy? It doesn't matter, you decided to kill this person instead of talking to them. I mean it got rid of your problem I guess... \n\n");
+    //Have fun with this error, you sicko. :P   
+  }
 
 	printf("Press Enter to continue...");
 	getchar();
