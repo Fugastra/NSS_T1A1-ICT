@@ -1,0 +1,5 @@
+ ---RESULTS--- 
+ Morality: -652
+ Health: 0
+ Crossed: 2| Obeyed: 4
+
